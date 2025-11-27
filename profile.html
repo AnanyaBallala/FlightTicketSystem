@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="profile-body">
+
+  <div class="profile-container">
+    <h2>My Profile</h2>
+
+    <form id="profileForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone">
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob">
+
+      <button type="submit">Save Changes</button>
+    </form>
+
+    <div class="profile-buttons">
+      <a href="mybookings.html" class="btn">My Bookings</a>
+      <a href="flights.html" class="btn-secondary">Search Flights</a>
+    </div>
+  </div>
+
+  <script>
+    
+    const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
+
+    document.getElementById("name").value = userProfile.name || "";
+    document.getElementById("email").value = userProfile.email || "";
+    document.getElementById("phone").value = userProfile.phone || "";
+    document.getElementById("dob").value = userProfile.dob || "";
+
+    document.getElementById("profileForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const dob = document.getElementById("dob").value;
+
+  // 🔹 Phone Validation — Add this here
+  if (phone && !/^\d{10}$/.test(phone)) {
+    alert("Enter a valid 10-digit phone number");
+    return;
+  }
+
+  const updatedProfile = { name, email, phone, dob };
+  localStorage.setItem("userProfile", JSON.stringify(updatedProfile));
+  alert("Profile updated successfully!");
+});
+
+
+  </script>
+
+</body>
+</html>

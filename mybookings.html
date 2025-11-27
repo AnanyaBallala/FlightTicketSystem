@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bookings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="mybookings-body">
+
+  <div id="bookingsContainer"></div>
+
+<script>
+  // 1️⃣ Get all bookings from localStorage
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+  // 2️⃣ Select the container where booking cards will be added
+  const container = document.getElementById("bookingsContainer");
+
+  // 3️⃣ Display each booking
+  bookings.forEach(b => {
+    container.innerHTML += `
+      <div class='booking-card'>
+        <h3>${b.flight.name}</h3>
+        <p>${b.from} → ${b.to}</p>
+        <p>Date: ${b.date}</p>
+        <p>Passenger: ${b.passengerName}</p>
+        <p>Seat: ${b.seat}</p>
+        <p>Status: ${b.paymentStatus || "Pending"}</p>
+      </div>`;
+  });
+</script>
+
+
+  <!-- <script>
+    
+    const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+    const bookingsList = document.getElementById("bookingsList");
+
+    if (bookings.length === 0) {
+      bookingsList.innerHTML = "<p>No bookings yet.</p>";
+    } else {
+      bookings.forEach((b, index) => {
+        const div = document.createElement("div");
+        div.classList.add("booking-item");
+        div.innerHTML = `
+          <h3>Flight: ${b.flightName}</h3>
+          <p><strong>From:</strong> ${b.from}</p>
+          <p><strong>To:</strong> ${b.to}</p>
+          <p><strong>Date:</strong> ${b.date}</p>
+          <p><strong>Seat:</strong> ${b.seat}</p>
+          <p><strong>Passenger:</strong> ${b.name}</p>
+          <button class="cancel-btn" onclick="cancelBooking(${index})">Cancel</button>
+        `;
+        bookingsList.appendChild(div);
+      });
+    }
+
+  
+    function cancelBooking(index) {
+      if (confirm("Are you sure you want to cancel this booking?")) {
+        bookings.splice(index, 1);
+        localStorage.setItem("bookings", JSON.stringify(bookings));
+        window.location.reload();
+      }
+    }
+  </script>
+</body>
+</html> -->

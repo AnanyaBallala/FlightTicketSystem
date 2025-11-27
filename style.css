@@ -1,0 +1,635 @@
+/* ---------------- Existing Styles (yours) ---------------- */
+body {
+  font-family: Arial, sans-serif;
+ background: #4497a1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Booking form container */
+.booking-container {
+  background:rgb(161, 230, 230);
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2a2a72;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #2a2a72;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1e1e5a;
+}
+
+/* Ticket details styling */
+.ticket {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2a2a72;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.btn:hover {
+  background: #1e1e5a;
+}
+
+/* Welcome page */
+.welcome-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #2a2a72, #009ffd);
+  color: white;
+  text-align: center;
+}
+.welcome-container {
+  max-width: 500px;
+  background: rgba(0,0,0,0.3);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Login page */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgb(161, 230, 230);
+}
+.login-container {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 300px;
+}
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2a2a72;
+}
+.login-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background: #2a2a72;
+  color:white(100, 86, 86);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.login-container button:hover {
+  background: #1e1e5a;
+}
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f4f6f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input, form button {
+  margin-top: 5px;
+  padding: 8px;
+}
+
+#ticketDetails {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.single-ticket {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.single-ticket button {
+  margin-right: 10px;
+}
+
+/* ---------------- Flights Page Styles ---------------- */
+
+header {
+  background: #2a2a72;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.search-container {
+  background: white;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.search-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2a2a72;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background: #2a2a72;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.search-container button:hover {
+  background: #1e1e5a;
+}
+
+.results-container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.flight-card {
+  background: white;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flight-card h3 {
+  margin-bottom: 5px;
+  color: #2a2a72;
+}
+
+.flight-card p {
+  margin: 3px 0;
+  color: #444;
+}
+
+.flight-card button {
+  background: #009ffd;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.flight-card button:hover {
+  background: #007acc;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* Fix layout for flights page */
+.flights-body {
+  display: block;         /* overrides flex layout */
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background:rgb(161, 230, 230);
+}
+/* ---------------- Payment Page ---------------- */
+
+.payment-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgb(161, 230, 230);
+}
+
+.payment-container {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.payment-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2a2a72;
+}
+
+.payment-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.payment-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.payment-container button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #2a2a72;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-container button:hover {
+  background: #1e1e5a;
+}
+
+.payment-container .btn {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+  background: #009ffd;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.payment-container .btn:hover {
+  background: #007acc;
+}
+/* ---------------- Success Page ---------------- */
+
+.success-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:rgb(161, 230, 230);
+  font-family: Arial, sans-serif;
+}
+
+.success-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+
+.checkmark {
+  font-size: 60px;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.success-container h2 {
+  color: #2a2a72;
+  margin-bottom: 10px;
+}
+
+.success-container p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.success-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2a2a72;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #1e1e5a;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #009ffd;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn-secondary:hover {
+  background: #007acc;
+}
+/* ---------------- My Bookings Page ---------------- */
+
+.mybookings-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f5f9;
+  font-family: Arial, sans-serif;
+}
+
+.mybookings-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mybookings-container h2 {
+  color: #2a2a72;
+  margin-bottom: 20px;
+}
+
+.booking-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.cancel-btn {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn:hover {
+  background: #d93636;
+}
+
+.mybookings-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+
+/* ---------------- Profile Page ---------------- */
+
+.profile-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ background:rgb(161, 230, 230);
+  font-family: Arial, sans-serif;
+}
+
+.profile-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.profile-container h2 {
+  color: #2a2a72;
+  margin-bottom: 20px;
+}
+
+#profileForm {
+  text-align: left;
+}
+
+#profileForm label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#profileForm input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#profileForm button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #2a2a72;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#profileForm button:hover {
+  background: #1e1e5a;
+}
+
+.profile-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+/* Body background for all pages */
+body {
+  font-family: Arial, sans-serif;
+  background: #e0f7fa; /* light cyan */
+  margin: 0;
+  padding: 0;
+}
+
+/* Welcome container */
+.welcome-container {
+  max-width: 500px;
+  background: rgba(0, 123, 255, 0.15); /* soft blue overlay */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Primary buttons */
+button, .btn {
+  background: #007bff; /* vivid blue */
+  color: white;
+}
+
+button:hover, .btn:hover {
+  background: #0056b3; /* darker blue on hover */
+}
+
+/* Secondary buttons */
+.btn-secondary {
+  background: #00bcd4; /* cyan */
+}
+
+.btn-secondary:hover {
+  background: #0097a7; /* darker cyan on hover */
+}
+
+/* Flight card background */
+.flight-card, .booking-item {
+  background: #ffffff; /* keep white for readability */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- Global Styles ---------------- */

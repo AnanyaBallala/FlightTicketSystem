@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Flights</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="flights-body">
+
+  <header>
+    <h1>Search Flights</h1>
+    <nav>
+      <a href="profile.html">Profile</a>
+      <a href="mybookings.html">My Bookings</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <section class="search-container">
+    <h2>Find Your Flight</h2>
+    <form id="searchForm">
+      <div class="input-group">
+        <label>From:</label>
+        <input type="text" id="from" placeholder="Enter departure city" required />
+      </div>
+      <div class="input-group">
+        <label>To:</label>
+        <input type="text" id="to" placeholder="Enter destination city" required />
+      </div>
+      <div class="input-group">
+        <label>Date:</label>
+        <input type="date" id="date" required />
+      </div>
+      <button type="submit">Search Flights</button>
+    </form>
+  </section>
+
+  <section class="results-container" id="resultsContainer">
+  
+  </section>
+
+  <script src="flights.js"></script>
+</body>
+</html>

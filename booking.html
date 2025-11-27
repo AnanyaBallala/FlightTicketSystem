@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | Flight Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="booking-body">
+  <div class="booking-container">
+    <h2>Enter Booking Details</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" placeholder="Enter your age" required>
+
+      <label for="seat">Preferred Seat</label>
+      <input type="text" id="seat" placeholder="e.g. 12A" required>
+
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </div>
+
+  <script>
+   document.getElementById("bookingForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Get values from form inputs
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+  const seat = document.getElementById("seat").value;
+
+  // Optional: validate inputs
+  if (!name || !age || !seat) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  // Save to localStorage for later pages
+  localStorage.setItem("passengerName", name);
+  localStorage.setItem("passengerAge", age);
+  localStorage.setItem("seat", seat);
+  localStorage.setItem("flightDate", localStorage.getItem("flightDate")); // already saved from flights page
+  localStorage.setItem("fromCity", localStorage.getItem("fromCity"));
+  localStorage.setItem("toCity", localStorage.getItem("toCity"));
+
+  // Redirect to payment
+  window.location.href = "payment.html";
+});
+
+
+    
+  </script>
+</body>
+</html>

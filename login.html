@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+      <title>Login | Flight Booking</title> 
+      <link rel="stylesheet" href="style.css">
+     </head> <body class="login-body">
+       <div class="login-container">
+         <h2>Login</h2>
+          <form onsubmit="return validateLogin(event)">
+             <label for="username">Username</label>
+              <input type="text" id="username" required> 
+              <label for="password">Password</label>
+               <input type="password" id="password" required>
+                <button type="submit">Login</button> 
+              </form>
+               <p id="errorMsg" class="error">
+
+               </p> </div> 
+               </script><script src="index.js"></script>
+               <script>
+                
+  function validateLogin(event) {
+    event.preventDefault();
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    
+    if (user && pass) {
+      localStorage.setItem("loggedInUser", user);
+
+      
+      window.location.href = "flights.html";  
+    } else {
+      document.getElementById("errorMsg").textContent = "Enter valid credentials";
+    }
+  }
+</script>
+
+ </body> 
+ </html>
