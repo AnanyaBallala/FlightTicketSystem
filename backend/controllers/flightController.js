@@ -1,11 +1,22 @@
-import Flight from "../models/Flight.js";
+import * as Flight from "../models/flightModel.js"; // ✅ matches file and functions
+
+
 
 export const getAllFlights = (req, res) => {
-  Flight.getAll((err, results) => {
+  Flight.getAllFlights((err, results) => {
     if (err) return res.status(500).json({ error: err });
     res.json(results);
   });
 };
+
+export const addFlight = (req, res) => {
+  const flightData = req.body;
+  Flight.createFlight(flightData, (err, results) => {
+    if (err) return res.status(500).json({ error: err });
+    res.status(201).json({ message: "Flight added successfully!" });
+  });
+};
+
 
 export const getFlightById = (req, res) => {
   const { id } = req.params;
@@ -24,11 +35,11 @@ export const searchFlights = (req, res) => {
   });
 };
 
-export const addFlight = (req, res) => {
-  const flightData = req.body;
-  Flight.create(flightData, (err, results) => {
-    if (err) return res.status(500).json({ error: err });
-    res.status(201).json({ message: "Flight added successfully!" });
-  });
-};
+// export const addFlight = (req, res) => {
+//   const flightData = req.body;
+//   Flight.create(flightData, (err, results) => {
+//     if (err) return res.status(500).json({ error: err });
+//     res.status(201).json({ message: "Flight added successfully!" });
+//   });
+// };
 
