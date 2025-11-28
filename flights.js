@@ -20,15 +20,15 @@ document.getElementById("searchForm").addEventListener("submit", function (e) {
 });
 
 function bookFlight(flightId) {
-  // Create a flight object
+ 
   const flightObject = {
     id: flightId,
-    name: flightId, // or full flight name if you have it
+    name: flightId, 
     airline: flightId === "AI203" ? "Air India" : "Indigo",
     time: flightId === "AI203" ? "10:00 AM" : "12:30 PM"
   };
 
-  // Save the full object
+
   localStorage.setItem("selectedFlight", JSON.stringify(flightObject));
 
   // Save from/to/date
@@ -36,6 +36,6 @@ function bookFlight(flightId) {
   localStorage.setItem("toCity", document.getElementById("to").value);
   localStorage.setItem("flightDate", document.getElementById("date").value);
 
-  // Go to booking page
+  
   window.location.href = "booking.html";
 }

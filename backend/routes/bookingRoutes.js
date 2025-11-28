@@ -3,7 +3,7 @@ import db from "../config/db.js";
 
 const router = express.Router();
 
-// ✅ Route 1: Basic flight booking (with seat number)
+
 router.post("/", (req, res) => {
   const { user_id, flight_id, seat_number } = req.body;
 

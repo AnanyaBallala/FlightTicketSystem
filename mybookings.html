@@ -11,13 +11,13 @@
   <div id="bookingsContainer"></div>
 
 <script>
-  // 1️⃣ Get all bookings from localStorage
+  
   const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
-  // 2️⃣ Select the container where booking cards will be added
+ 
   const container = document.getElementById("bookingsContainer");
 
-  // 3️⃣ Display each booking
+  
   bookings.forEach(b => {
     container.innerHTML += `
       <div class='booking-card'>

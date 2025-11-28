@@ -32,7 +32,7 @@
   const age = document.getElementById("age").value;
   const seat = document.getElementById("seat").value;
 
-  // Optional: validate inputs
+  
   if (!name || !age || !seat) {
     alert("Please fill all fields");
     return;
@@ -46,7 +46,7 @@
   localStorage.setItem("fromCity", localStorage.getItem("fromCity"));
   localStorage.setItem("toCity", localStorage.getItem("toCity"));
 
-  // Redirect to payment
+ 
   window.location.href = "payment.html";
 });
 

@@ -1,4 +1,5 @@
-import * as Flight from "../models/flightModel.js"; // ✅ matches file and functions
+import * as Flight from "../models/flightModel.js";
+
 
 
 

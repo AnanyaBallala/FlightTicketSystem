@@ -1,4 +1,5 @@
-import * as Flight from "../models/flightModel.js"; 
+import User from '../models/userModel.js';
+
 
 
 export const getAllFlights = (req, res) => {
