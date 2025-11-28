@@ -2,29 +2,33 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import db from "./config/db.js";
-
-import flightRoutes from "./routes/flightRoutes.js";
-import bookingRoutes from "./routes/bookingRoutes.js"; 
-
-dotenv.config();
 import path from "path";
-//import express from "express";
+import { fileURLToPath } from "url";
+
+import db from "./config/db.js";
+import flightRoutes from "./routes/flightRoutes.js";
+import bookingRoutes from "./routes/bookingRoutes.js";
+
+// Load environment variables
+dotenv.config();
+
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.static(__dirname));  // Serve all frontend files
-
-
-//const app = express(); 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static("../"));
+
+// Serve frontend files
+app.use(express.static(path.join(__dirname, "../"))); // adjust if frontend is in root folder
 
 // Routes
 app.use("/api/flights", flightRoutes);
-app.use("/api/bookings", bookingRoutes); 
+app.use("/api/bookings", bookingRoutes);
+
 // Test route
 app.get("/api/test", (req, res) => {
   res.json({ message: "Backend is working!" });
